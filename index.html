@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jokenpô Interativo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Jokenpô</h1>
+      <p class="subtitulo">Escolha uma opção para desafiar o computador</p>
+    </header>
+
+    <section class="placar" aria-label="Placar do jogo">
+      <div class="pontuacao">
+        <span>Você</span>
+        <strong id="pontos-usuario">0</strong>
+      </div>
+      <div class="divisor">X</div>
+      <div class="pontuacao">
+        <span>Computador</span>
+        <strong id="pontos-computador">0</strong>
+      </div>
+    </section>
+
+    <section class="arena" aria-label="Escolhas da rodada">
+      <div class="lado">
+        <div id="mao-usuario" class="icone-escolha">❔</div>
+        <span id="texto-usuario">Aguardando...</span>
+      </div>
+      <div class="vs">VS</div>
+      <div class="lado">
+        <div id="mao-computador" class="icone-escolha">❔</div>
+        <span id="texto-computador">Aguardando...</span>
+      </div>
+    </section>
+
+    <section id="resultado" class="resultado neutro" role="status" aria-live="polite">
+      Faça sua jogada para começar!
+    </section>
+
+    <section class="opcoes" aria-label="Opções de jogada">
+      <button type="button" class="btn-opcao" data-escolha="pedra">
+        <span class="emoji">✊</span>
+        <span>Pedra</span>
+      </button>
+      <button type="button" class="btn-opcao" data-escolha="papel">
+        <span class="emoji">✋</span>
+        <span>Papel</span>
+      </button>
+      <button type="button" class="btn-opcao" data-escolha="tesoura">
+        <span class="emoji">✌️</span>
+        <span>Tesoura</span>
+      </button>
+    </section>
+
+    <footer>
+      <button type="button" id="btn-reiniciar" class="btn-reiniciar">
+        Reiniciar Jogo
+      </button>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
